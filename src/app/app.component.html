@@ -1,5 +1,6 @@
 <!--Estilice el componente "header" como se muestra en la figura y agreguelo a la pagina principal-->
 <app-header></app-header>
+
 <!--Edite el componente principal de la aplicacion para que se coloque una image a modo de "banner" y que este posicionada-->
 <main>
   <div class="container">
@@ -44,71 +45,100 @@
         <!-- Las "cards" presentadas en la imagen deben ser generadas con la directiva estructural ngFor
         En las cards utilizar la directiva estructural ngIf para condicionar el mensaje "Envio gratis" (de color de texto verde).-->
         <!--Programar un two-way binding para que la variable "busqueda" reciba lo que se escriba en el input de la pagina, cuando el busqueda sea distinto de vacio, entonces con el uso de ngIf hacer aparecer el h1 indicado en la imagen desafio3_2 y que en el, en tiempo de ejecucion aparezca lo que se va escribiendo en el input.-->
-          <h1 class="d-inline fs-3 text-secondary fw-light" id="a" *ngIf="busqueda != ''">
-              {{busqueda}}
-          </h1>
-          <h1 class="d-inline fs-3 text-secondary fw-light" id="a" *ngIf="busqueda ==''">
-              ultima visita
-          </h1>
-          <a href="#" class="text-decoration-none ms-2">Ver historial</a>
+        <h1
+          class="d-inline fs-3 text-secondary fw-light"
+          id="a"
+          *ngIf="busqueda != ''"
+        >
+          {{ busqueda }}
+        </h1>
+        <h1
+          class="d-inline fs-3 text-secondary fw-light"
+          id="a"
+          *ngIf="busqueda == ''"
+        >
+          ultima visita
+        </h1>
+        <a href="#" class="text-decoration-none ms-2">Ver historial</a>
       </div>
       <div id="unos" class="productos d-flex justify-content-center mb-5">
-          <mat-card class="example-card rounded m-2" *ngFor="let p of productos.vista">
-              <img class=" pb-1 border-bottom" mat-card-image src={{p.imagenUrl}} alt="nro {{p.id}} - {{p.nombre}}">
-              <mat-card-content>
-                  <h2 class=" m-0 fs-4 fw-normal">U$S {{p.precio}}</h2>
-                  <h5 class="m-0 text-success" *ngIf="p.tipoEnvio">Envio Gratis</h5>
-                  <div class="descripcion">
-                      <p class="text-secondary">{{p.nombre}}</p>
-                  </div>
-              </mat-card-content>
-          </mat-card>
+        <mat-card
+          class="example-card rounded m-2"
+          *ngFor="let p of productos.vista"
+        >
+          <img
+            class="pb-1 border-bottom"
+            mat-card-image
+            src="{{ p.imagenUrl }}"
+            alt="nro {{ p.id }} - {{ p.nombre }}"
+          />
+          <mat-card-content>
+            <h2 class="m-0 fs-4 fw-normal">U$S {{ p.precio }}</h2>
+            <h5 class="m-0 text-success" *ngIf="p.tipoEnvio">Envio Gratis</h5>
+            <div class="descripcion">
+              <p class="text-secondary">{{ p.nombre }}</p>
+            </div>
+          </mat-card-content>
+        </mat-card>
       </div>
     </div>
     <div id="dos">
       <div class="tituloSeccion">
         <h1 class="d-inline fs-3 text-secondary fw-light">
-            Relacionado con tus visitas en Accesorios Beisbol
+          Relacionado con tus visitas en Accesorios Beisbol
         </h1>
         <a href="#" class="text-decoration-none ms-2">Ver historial</a>
-    </div>
-    <div id="doss" class="productos d-flex justify-content-center mb-5">
-        <mat-card class="example-card rounded m-2" *ngFor="let p of productos.relacionVehiculos">
-            <img class=" pb-1 border-bottom" mat-card-image src={{p.imagenUrl}} alt="nro {{p.id}} - {{p.nombre}}">
-            <mat-card-content>
-                <h2 class=" m-0 fs-4 fw-normal">U$S {{p.precio}}</h2>
-                <h5 class="m-0 text-success" *ngIf="p.tipoEnvio">Envio Gratis</h5>
-                <div class="descripcion">
-                    <p class="text-secondary">{{p.nombre}}</p>
-                </div>
-            </mat-card-content>
+      </div>
+      <div id="doss" class="productos d-flex justify-content-center mb-5">
+        <mat-card
+          class="example-card rounded m-2"
+          *ngFor="let p of productos.relacionVehiculos"
+        >
+          <img
+            class="pb-1 border-bottom"
+            mat-card-image
+            src="{{ p.imagenUrl }}"
+            alt="nro {{ p.id }} - {{ p.nombre }}"
+          />
+          <mat-card-content>
+            <h2 class="m-0 fs-4 fw-normal">U$S {{ p.precio }}</h2>
+            <h5 class="m-0 text-success" *ngIf="p.tipoEnvio">Envio Gratis</h5>
+            <div class="descripcion">
+              <p class="text-secondary">{{ p.nombre }}</p>
+            </div>
+          </mat-card-content>
         </mat-card>
-    </div>
+      </div>
     </div>
     <div id="tres">
       <div class="tituloSeccion">
         <h1 class="d-inline fs-3 text-secondary fw-light">
-            Relacionado con tus visitas en Beisbol
+          Relacionado con tus visitas en Beisbol
         </h1>
         <a href="#" class="text-decoration-none ms-2">Ver historial</a>
-    </div>
-    <div id="tress" class="productos d-flex justify-content-center mb-5">
-        <mat-card class="example-card rounded m-2" *ngFor="let p of productos.relacionComputacion">
-            <img class=" pb-1 border-bottom" mat-card-image src={{p.imagenUrl}} alt="nro {{p.id}} - {{p.nombre}}">
-            <mat-card-content>
-                <h2 class=" m-0 fs-4 fw-normal">U$S {{p.precio}}</h2>
-                <h5 class="m-0 text-success" *ngIf="p.tipoEnvio">Envio Gratis</h5>
-                <div class="descripcion">
-                    <p class="text-secondary">{{p.nombre}}</p>
-                </div>
-            </mat-card-content>
+      </div>
+      <div id="tress" class="productos d-flex justify-content-center mb-5">
+        <mat-card
+          class="example-card rounded m-2"
+          *ngFor="let p of productos.relacionComputacion"
+        >
+          <img
+            class="pb-1 border-bottom"
+            mat-card-image
+            src="{{ p.imagenUrl }}"
+            alt="nro {{ p.id }} - {{ p.nombre }}"
+          />
+          <mat-card-content>
+            <h2 class="m-0 fs-4 fw-normal">U$S {{ p.precio }}</h2>
+            <h5 class="m-0 text-success" *ngIf="p.tipoEnvio">Envio Gratis</h5>
+            <div class="descripcion">
+              <p class="text-secondary">{{ p.nombre }}</p>
+            </div>
+          </mat-card-content>
         </mat-card>
+      </div>
     </div>
-    </div>
-
-
-
-</section>
+  </section>
 </main>
-
+<app-descripcion></app-descripcion>
 <router-outlet></router-outlet>

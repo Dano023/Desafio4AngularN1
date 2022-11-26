@@ -136,11 +136,8 @@ export class AppComponent {
         tipoEnvio,
         imagen
       ]
-    this.servicioDetalle.disparadorDetalle.emit({
-      datos: this.datosSelec,
-
-    });
-
   }
+
+
 
 }

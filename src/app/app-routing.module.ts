@@ -2,8 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: 'home', component: component },
-  { path: 'descripcion/:id', component: descripcionComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
 

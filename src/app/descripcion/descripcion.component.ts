@@ -208,7 +208,7 @@ export class DescripcionComponent implements OnInit {
 
   ngOnInit(): void {
     this.id = this.route.snapshot.paramMap.get('id');
-    this.producto = this.getdescripcion(this.productos);
+    this.producto = this.getdescripcion(this.producto);
   }
 
   getdescripcion(producto: any[]): void {
