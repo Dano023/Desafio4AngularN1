@@ -1,0 +1,98 @@
+<!--Maquetar el componente "descripcion segun se indica en la imagen.-->
+<section id="descripcion" class="container">
+  <div class="interesarte">
+      <p>
+          <span>También puede interesarte: </span>computadora - canaima - antminer s9 - laptop canaima - canaima
+          letras rojas
+      </p>
+  </div>
+  <div class="navDetalles">
+      <div>
+          <a routerLink="/home">Volver al listado</a>
+          <a href="#">{{producto.categoria}}</a>
+          <span class="iconify" data-icon="dashicons:arrow-right-alt2"></span>
+          <a href="#">{{producto.seccion}}</a>
+          <span class="iconify" data-icon="dashicons:arrow-right-alt2"></span>
+          <a href="#">{{producto.tipoProducto}}</a>
+      </div>
+      <div>
+          <a href="#">Compartir</a>
+          <a href="#">Vender uno igual</a>
+      </div>
+  </div>
+  <article class="detallesProducto">
+
+      <div class="imagenesProducto">
+          <div>
+              <img src={{producto.imagenUrl}} alt="nro-{{producto.id}}-{{producto.nombre}}">
+          </div>
+          <div>
+              <img src={{producto.imagenUrl}} alt="nro-{{producto.id}}-{{producto.nombre}}">
+          </div>
+          <div>
+              <img src={{producto.imagenUrl}} alt="nro-{{producto.id}}-{{producto.nombre}}">
+          </div>
+      </div>
+
+      <div class="imagenProducto">
+          <div>
+              <img src={{producto.imagenUrl}} alt="nro-{{producto.id}}-{{producto.nombre}}">
+          </div>
+      </div>
+
+      <div class="datosProducto">
+          <span class="vendidos">
+              <p>{{producto.estado}} | {{producto.vendidos}} vendidos</p>
+          </span>
+          <div class="nombre">
+              <p>{{producto.nombre}}</p>
+              <span class="iconify deseado" data-icon="arcticons:hearth"></span>
+          </div>
+          <div class="rate">
+              <input type="radio" id="star1" name="rate" value="1" />
+              <label for="star1" title="1 estrella">1 stars</label>
+              <input type="radio" id="star2" name="rate" value="2" />
+              <label for="star2" title="2 estrellas">2 stars</label>
+              <input type="radio" id="star3" name="rate" value="3" />
+              <label for="star3" title="3 estrellas">3 stars</label>
+              <input type="radio" id="star4" name="rate" value="4" />
+              <label for="star4" title="4 estrellas">4 stars</label>
+              <input type="radio" id="star5" name="rate" value="5" />
+              <label for="star5" title="5 estrellas">5 star</label>
+              <p>{{producto.opiniones}} opiniones</p>
+          </div>
+          <div class="precio">
+              <span>
+                  <h3>U$S {{producto.precio}}</h3>
+                  <span class="iconify ayuda" data-icon="bx:help-circle"></span>
+              </span>
+              <h5>Bs. {{producto.precio * 5.5}}</h5>
+              <a href="#">Ver los medios de pago</a>
+          </div>
+          <div class="envio">
+              <span *ngIf="producto.tipoEnvio">
+                  <span class="iconify carrito" data-icon="bi:truck"></span>
+                  <p>Envío gratis a todo el país</p>
+              </span>
+              <p>Barquisimeto, Lara</p>
+              <a href="#">Ver costos envío</a>
+          </div>
+          <div class="personalizar">
+              <p>Color: <span>Negro</span></p>
+              <p>Cantidad:
+                  <select name="" id="">
+                      <option value="value1" selected>1 unidad</option>
+                      <option value="value2">2 unidad</option>
+                      <option value="value3">3 unidad</option>
+                      <option value="value3">4 unidad</option>
+                      <option value="value3">5 unidad</option>
+                  </select>
+                  <span>({{producto.cantidad}} disponibles)</span>
+              </p>
+          </div>
+          <button class="btnComprar">Comprar ahora</button>
+      </div>
+
+  </article>
+
+</section>

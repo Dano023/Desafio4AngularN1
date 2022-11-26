@@ -1,0 +1,135 @@
+body {
+    background-color: #ebebeb;
+}
+
+.container {
+    background-color: white;
+    width: 100%;
+}
+
+ul,
+li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+/* condicionar el mensaje "Envio gratis" (de color de texto verde).*/
+h5{
+  color: green
+}
+
+ul.slid {
+    position: relative;
+    width: 100%;
+    height: 340px;
+}
+
+ul.slid li {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    opacity: 0;
+    width: 100%;
+    height: inherit;
+    transition: opacity .5s;
+    background: #fff;
+}
+
+ul.slid li img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+}
+
+ul.slid li:first-child {
+    opacity: 1;
+}
+
+ul.slid li:target {
+    opacity: 1;
+}
+
+.main {
+    text-align: center;
+}
+
+.main li {
+    display: inline-block;
+    text-align: center;
+}
+
+.main li a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    background-color: #646464dc;
+    margin: 5px;
+    width: 8px;
+    height: 8px;
+    font-size: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.788);
+    border-radius: 100%;
+    transition: all 500ms;
+}
+
+.main li a:hover {
+    background-color: #1a1919;
+    border: 2px solid #b0b0b0;
+}
+
+.main li a:active {
+    background-color: #282828;
+    border: 2px solid #282828;
+    transition: all 100ms;
+}
+#productos {
+  margin: 40px auto 80px auto;
+}
+
+.tituloSeccion {
+  margin: 20px 0 20px 5em;
+}
+
+.productos {
+  height: 330px;
+}
+
+.example-card {
+  max-width: 220px;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.descripcion {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.example-card:hover {
+  transition: all 500ms;
+  height: 338px;
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.example-card:hover .descripcion {
+  opacity: 1;
+  visibility: visible;
+}
+
+.example-card img {
+  width: 210px;
+  height: 208px;
+}
+#unos,#doss,#tress{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+#a{
+  background-color: blue;
+  color: black;
+  width: auto;
+  height: 50px;
+}

@@ -1,0 +1,7 @@
+/* You can add global styles to this file, and also import other style files */
+/*utilice el selector global " * " para que todo el documento implemente esa fuente estableciendolo en el archivo style.css de la raiz del proyecto.*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+}
